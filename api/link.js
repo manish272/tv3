@@ -12,7 +12,7 @@ module.exports = async (req, res) => {
 
   try {
     var response = await fetch({
-      url: songFromID(songId),
+      (url: string): songFromID(songId),
       method: "get",
     });
     var data = unescape(response.data)[songId];
@@ -33,7 +33,7 @@ module.exports = async (req, res) => {
 async function getId(reqLink) {
   return (
     await fetch({
-      url: reqLink,
+      (url: string): reqLink,
       method: "get",
     })
   ).data
