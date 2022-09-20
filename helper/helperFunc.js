@@ -5,7 +5,7 @@ module.exports = {
     var firstLetter = str.slice(0, 1);
     return firstLetter.toUpperCase() + str.substring(1);
   },
-  makeDifferentQualityMediaUrls: (url) => {
+  makeDifferentQualityMediaUrls: (url: string) => {
     let replaced = url.replace("preview.saavncdn.com", "aac.saavncdn.com");
     return {
       "96_KBPS": replaced.replace("_96_p", "_96"),
